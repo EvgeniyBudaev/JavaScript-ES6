@@ -10,11 +10,17 @@ function fetchOrders(count = 10, start = 0) {
 }
 fetchOrders();
 
+/**********
+ * ********* */
+
 // REST-ПАРАМЕТР
 function numbers(...args) {
 // console.log(args); [1, 2, 6, 4]
 };
 numbers(1, 2, 6, 4);
+
+/**********
+ * ********* */
 
 // SPREAD ОПЕРАТОР ДЛЯ МАССИВОВ
 const array1 = [1, 2, 3];
@@ -23,6 +29,9 @@ const maximumNumber = Math.max(0, ...array1, ...array2, 7);
 // console.log(maximumNumber);
 const shallowCopyArray = [...array1];
 // console.log(shallowCopyArray)
+
+/**********
+ * ********* */
 
 // ДЕСТРУКТУРИЗАЦИЯ ОБЪЕКТОВ
 const person = {
@@ -57,6 +66,8 @@ const { duck, ...otherAnimals} = dict;
 // console.log(otherAnimals); {dog: "wuff", mouse: "squeak"}
 // console.log(duck); quack
 
+/**********
+ * ********* */
 
 // ДЕСТРУКТУРИЗАЦИЯ МАССИВОВ
 const fib = [1, 1, 2, 3, 5, 8, 13];
@@ -111,6 +122,9 @@ const shape = {
 const { coordinates: { start: [startX, startY], end: [endx, endY]}} = shape;
 // console.log(startX, startY, endx, endY); 10 15 17 15
 
+/**********
+ * ********* */
+
 // ОБЬЕКТЫ
 const defaulst = {
 	address: 'null',
@@ -131,4 +145,14 @@ const book = {
 const shallowCopyObject = Object.assign({}, book);
 // console.log(shallowCopyObject); {title: "Romeo", author: "Shekspir"}
 
+/**********
+ * ********* */
+
 // ОПЕРАТОР OBJECT SPREAD
+port = 8080;
+const res6 = {
+	...defaulst, 
+	...op, 
+	port,
+  conect(){}};
+// console.log(res6); {address: "null", dbname: "blog", dbuser: "admin", dbUser: "john", password: "utopia", port; 8080}
